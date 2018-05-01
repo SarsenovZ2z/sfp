@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         camera = Camera.open();
-
     }
 
     public void startEncoding(View v) {
@@ -41,36 +40,43 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void dot() {
-        turnOn();
+    void delay(long t) {
         try {
-            TimeUnit.MILLISECONDS.sleep(100);
+            TimeUnit.MILLISECONDS.sleep(t);
         }
         catch (Exception e) {}
+    }
+
+    void dot() {
+        delay(20);
+        turnOn();
+        delay(160);
         turnOff();
+        delay(20);
     }
 
     void dash() {
-        try {
-            TimeUnit.MILLISECONDS.sleep(100);
-        }
-        catch (Exception e) {}
+        delay(40);
+        turnOn();
+        delay(120);
+        turnOff();
+        delay(40);
     }
 
     void space() {
-        try {
-            TimeUnit.MILLISECONDS.sleep(50);
-        }
-        catch (Exception e) {}
+        delay(60);
+        turnOn();
+        delay(80);
+        turnOff();
+        delay(60);
     }
 
     void sep() {
+        delay(80);
         turnOn();
-        try {
-            TimeUnit.MILLISECONDS.sleep(50);
-        }
-        catch (Exception e) {}
+        delay(40);
         turnOff();
+        delay(80);
     }
 
     private void turnOff() {
@@ -194,6 +200,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return "|";
     }
-
-
 }
