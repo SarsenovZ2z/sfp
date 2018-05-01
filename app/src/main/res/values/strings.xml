@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">sfp</string>
+    <string name="textMorseHint">Text to encode</string>
+    <string name="textMorseText">This is test message:)</string>
+    <string name="buttonMorseHint">Click to encode</string>
+    <string name="buttonMorseText">Click me!</string>
 </resources>
